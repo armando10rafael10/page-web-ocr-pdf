@@ -1,0 +1,188 @@
+/* este estilo es para el iframe */
+html, body{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+/* este estilo es para el iframe */
+
+footer{
+    background-color: rgb(0, 0, 0);
+    height: 600px;
+    width: 100%;
+    display: flex;
+    padding: 30px;
+    box-sizing: border-box;
+}
+footer .acerca-de{
+    height: 100%;
+    width: 50%;
+    padding: 30px;
+    border-right: 2px solid rgb(184, 130, 130);
+    box-sizing: border-box;
+}
+footer .acerca-de h1{
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: rgb(225, 188, 188);
+}
+footer .acerca-de img{
+    height: 30%;
+    float: left;
+    margin-right: 15px;
+}
+footer .acerca-de p{
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: rgb(181, 152, 152);
+    /* text-shadow: 1px 1px 0px rgb(165, 145, 134); */
+}
+
+footer .contacto{
+    height: 100%;
+    width: 50%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+footer .contacto .contactanos{
+    height: 75%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+footer .contacto .contactanos .group{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+footer .contacto .contactanos .group h1{
+    font-size: 18px;
+    color: rgb(183, 148, 146);
+    bottom: 20px;
+}
+footer .contacto .contactanos .group label{
+    height: 100%;
+    width: 16%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 5px;
+    font-size: 14px;
+    color: rgb(183, 148, 146);;
+}
+footer .contacto .contactanos .group input{
+    height: 30%;
+    width: 60%;
+    padding: 7px;
+    font-size: 14px;
+    border: 1px solid rgb(105, 77, 77);
+}
+footer .contacto .contactanos .group textarea{
+    height: 50%;
+    width: 60%;
+    padding: 7px;
+    font-size: 14px;
+    border: 1px solid rgb(105, 77, 77);
+}
+
+footer .contacto .contactanos .group input:focus,
+footer .contacto .contactanos .group textarea:focus{
+    border: 3px solid rgb(255, 120, 2);
+}
+footer .contacto .contactanos .group button{
+    background-color: rgb(82, 60, 58);
+    border: 1px solid rgb(88, 66, 58);
+    color: white;
+    height: 30px;
+    width: 120px;
+    border-radius: 10px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+footer .contacto .contactanos .group button:hover{
+    background-color: rgb(27, 18, 18);
+    border: 1px solid rgb(144, 121, 121);
+}
+footer .contacto .redes-sociales{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background-color: rgba(122, 141, 157, 0.789);
+}
+footer .contacto .redes-sociales img{
+    height: 32px;
+    margin-right: 15px;
+}
+footer .contacto .redes-sociales img:hover{
+    border-radius: 15px;
+    border: 2px groove rgb(64, 49, 49);
+}
+footer .contacto .copyright{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+}
+footer .contacto .copyright h2{
+    font-size: 12px;
+}
+
+@media only screen and (max-width: 620px) and (min-width: 401px){
+    footer{
+        padding: 20px;
+    }
+    footer .acerca-de{
+        width: 100%;
+        padding: 10px;
+        border: none;
+    }
+    footer .acerca-de h1{
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    footer .acerca-de img{
+        height: 25%;
+    }
+    footer .acerca-de p{
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+    footer .contacto{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 400px) and (min-width: 200px) {
+    footer{
+        height: 1000px;
+        padding: 20px;
+    }
+    footer .acerca-de{
+        width: 100%;
+        padding: 10px;
+        border: none;
+    }
+    footer .acerca-de h1{
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    footer .acerca-de img{
+        height: 15%;
+    }
+    footer .acerca-de p{
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    footer .contacto{
+        display: none;
+    }
+}

@@ -1,0 +1,520 @@
+*{
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+}
+html, body{
+    background-color: rgb(231, 219, 205);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
+}
+#iframe-footer{
+    width: 100%;
+    height: 600px;
+    display: block;
+    overflow: hidden;
+}
+
+.presentacion{
+    width: 100%;
+    height: 500px;
+    background: url("../images/background-writer.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.presentacion h1{
+    width: 100%;
+    font-size: 140px;
+    font-family: 'Anton';
+    letter-spacing: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+    background-image: url('../images/montain.jpg');
+    background-position-y: top;
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 3px rgb(152, 91, 57);
+    animation: 11s marea infinite ease-in-out;
+}
+@keyframes marea {
+    0%   {
+        background-position-y: top;
+        letter-spacing: 35px;
+        -webkit-text-stroke: 3px rgb(152, 91, 57);
+    }
+    25%  {
+        background-position-y: center; 
+        letter-spacing: 32px;  
+        -webkit-text-stroke: 2px rgb(58, 47, 41);
+    }
+    50%  {
+        background-position-y: bottom;
+        letter-spacing: 30px;
+        -webkit-text-stroke: 1px rgb(41, 37, 25);
+    }
+    60%  {
+        background-position-y: center;
+        letter-spacing: 32px;
+        -webkit-text-stroke: 2px rgb(58, 47, 41)
+    }
+    100%  {
+        background-position-y: top;
+        letter-spacing: 35px;
+        -webkit-text-stroke: 3px rgb(152, 91, 57);
+    }
+}  
+.contenido-principal{
+    height: 760px;
+    width: 100%;
+    display: flexbox;
+    padding: 40px;
+    box-sizing: border-box;
+    background-color: black;
+    background-image: url("../images/background-curves.png");
+}
+.contenido-principal .titulo{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+}
+.contenido-principal .titulo h1{
+    font-family: Helvetica, sans-serif;
+    font-size: 96px;
+    text-transform: uppercase;
+    color: rgb(51, 38, 38);
+}
+.contenido-principal .contenedor{
+    height: 80%;
+    width: 100%;
+    display: flex;
+}
+.contenido-principal .contenedor section{
+    height: 100%;
+    width: 55%;
+    padding: 40px 60px;
+    box-sizing: border-box;
+}
+.contenido-principal .contenedor section .slider{
+    height: 80%;
+    width: 80%;
+    margin: auto;
+	overflow: hidden;
+}
+.contenido-principal .contenedor section .slider ul {
+	display: flex;
+	padding: 0;
+	width: 400%;	
+	animation: cambio 8s infinite alternate-reverse linear;
+}
+.contenido-principal .contenedor section .slider li {
+	width: 100%;
+	list-style: none;
+}
+.contenido-principal .contenedor section .slider img {
+	height: 90%;
+    width: 100%;
+}
+@keyframes cambio {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	45% {margin-left: -100%;}
+	70% {margin-left: -200%;}
+	100% {margin-left: -300%;}
+}
+.contenido-principal .contenedor aside{
+    height: 100%;
+    width: 45%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.contenido-principal .contenedor aside .articulos{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;  
+    justify-content: space-between;
+    justify-content: space-evenly; 
+}
+.contenido-principal .contenedor aside .articulos article{
+    width: 100%;
+    height: 27%;
+    display: flex;  
+    font-family: Helvetica, sans-serif;
+}
+.contenido-principal .contenedor aside .articulos article .numero{
+    height: 100%;
+    width: 15%;
+    font-size: 56px;
+    text-align: center;
+}
+.contenido-principal .contenedor aside .articulos article .texto{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.contenido-principal .contenedor aside .articulos article .texto h1{
+    height: 25%;
+    width: 100%;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    color: rgb(51, 38, 38);
+}
+.contenido-principal .contenedor aside .articulos article .texto p{
+    height: 75%;
+    width: 100%;
+    text-align: justify;
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 620px) and (min-width: 401px){
+    .presentacion{
+        width: 100%;
+        height: 250px;
+    }
+    .presentacion h1{
+        width: 100%;
+        font-size: 30px;
+        font-family: 'Arial';
+        letter-spacing: 15px;
+        animation: 11s marea infinite ease-in-out;
+    }
+    @keyframes marea {
+        0%   {
+            background-position-y: top;
+            letter-spacing: 10px;
+            -webkit-text-stroke: 3px rgba(73, 51, 39, 0.504);
+        }
+        25%  {
+            background-position-y: center; 
+            letter-spacing: 11px;  
+            -webkit-text-stroke: 2px rgb(58, 47, 41);
+        }
+        50%  {
+            background-position-y: bottom;
+            letter-spacing: 12px;
+            -webkit-text-stroke: 1px rgba(86, 65, 2, 0.444);
+        }
+        60%  {
+            background-position-y: center;
+            letter-spacing: 11px;
+            -webkit-text-stroke: 2px rgb(58, 47, 41)
+        }
+        100%  {
+            background-position-y: top;
+            letter-spacing: 10px;
+            -webkit-text-stroke: 3px rgba(225, 67, 0, 0.243);
+        }
+    }  
+    .contenido-principal{
+        height: 560px;
+        width: 100%;
+        padding: 30px;
+    }
+    .contenido-principal .titulo{
+        height: 15%;
+        width: 100%;
+        margin-bottom: 3%;
+    }
+    .contenido-principal .titulo h1{
+        font-size: 42px;
+    }
+    .contenido-principal .contenedor{
+        height: 80%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .contenido-principal .contenedor section{
+        height: 65%;
+        width: 100%;
+        padding: 0px;
+    }
+    .contenido-principal .contenedor section .slider{
+        height: 100%;
+        width: 55%;
+    }
+    .contenido-principal .contenedor section .slider ul {
+        width: 400%;	
+        animation: cambio 8s infinite alternate-reverse linear;
+    }
+    .contenido-principal .contenedor aside{
+        height: 35%;
+        width: 100%;
+        padding: 20px;
+    }
+    .contenido-principal .contenedor aside .articulos{
+        height: 100%;
+        width: 100%;
+        display: block;
+    }
+    .contenido-principal .contenedor aside .articulos article{
+        width: 100%;
+        height: 27%;
+        display: flex;  
+        justify-content: center;
+    }
+    .contenido-principal .contenedor aside .articulos article .numero{
+        height: 100%;
+        width: 15%;
+        font-size: 16px;
+        text-align: right;
+        margin-right: 2%;
+    }
+    .contenido-principal .contenedor aside .articulos article .texto{
+        height: 100%;
+        width: 70%;
+        display: block;
+    }
+    .contenido-principal .contenedor aside .articulos article .texto h1{
+        width: 100%;
+        height: 100%;
+        font-size: 13px;
+        color: rgb(51, 38, 38);
+    }
+    .contenido-principal .contenedor aside .articulos article .texto p{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 400px) and (min-width: 301px){
+    .presentacion{
+        width: 100%;
+        height: 100px;
+    }
+    .presentacion h1{
+        width: 100%;
+        font-size: 25px;
+        font-family: 'Arial';
+        letter-spacing: 15px;
+        animation: 11s marea infinite ease-in-out;
+    }
+    @keyframes marea {
+        0%   {
+            background-position-y: top;
+            letter-spacing: 10px;
+            -webkit-text-stroke: 3px rgba(73, 51, 39, 0.504);
+        }
+        25%  {
+            background-position-y: center; 
+            letter-spacing: 11px;  
+            -webkit-text-stroke: 2px rgb(58, 47, 41);
+        }
+        50%  {
+            background-position-y: bottom;
+            letter-spacing: 12px;
+            -webkit-text-stroke: 1px rgba(86, 65, 2, 0.444);
+        }
+        60%  {
+            background-position-y: center;
+            letter-spacing: 11px;
+            -webkit-text-stroke: 2px rgb(58, 47, 41)
+        }
+        100%  {
+            background-position-y: top;
+            letter-spacing: 10px;
+            -webkit-text-stroke: 3px rgba(225, 67, 0, 0.243);
+        }
+    }  
+    .contenido-principal{
+        height: 560px;
+        width: 100%;
+        padding: 30px;
+        border: 1px solid red;
+    }
+    .contenido-principal .titulo{
+        height: 15%;
+        width: 100%;
+        margin-bottom: 3%;
+    }
+    .contenido-principal .titulo h1{
+        font-size: 22px;
+    }
+    .contenido-principal .contenedor{
+        height: 80%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .contenido-principal .contenedor section{
+        height: 60%;
+        width: 100%;
+        padding: 0px;
+    }
+    .contenido-principal .contenedor section .slider{
+        height: 100%;
+        width: 55%;
+    }
+    .contenido-principal .contenedor section .slider ul {
+        width: 400%;	
+        animation: cambio 8s infinite alternate-reverse linear;
+    }
+    .contenido-principal .contenedor aside{
+        height: 40%;
+        width: 100%;
+        padding: 0px;
+    }
+    .contenido-principal .contenedor aside .articulos{
+        height: 100%;
+        width: 100%;
+        display: block;
+    }
+    .contenido-principal .contenedor aside .articulos article{
+        width: 100%;
+        height: 27%;
+        display: flex;  
+        justify-content: center;
+    }
+    .contenido-principal .contenedor aside .articulos article .numero{
+        height: 100%;
+        width: 15%;
+        font-size: 14px;
+        text-align: right;
+        margin-top: 8px;
+        margin-right: 2%;
+    }
+    .contenido-principal .contenedor aside .articulos article .texto{
+        height: 100%;
+        width: 70%;
+        display: block;
+    }
+    .contenido-principal .contenedor aside .articulos article .texto h1{
+        width: 100%;
+        height: 100%;
+        font-size: 13px;
+        color: rgb(51, 38, 38);
+    }
+    .contenido-principal .contenedor aside .articulos article .texto p{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 300px) and (min-width: 200px){
+    .presentacion{
+        width: 100%;
+        height: 80px;
+    }
+    .presentacion h1{
+        width: 100%;
+        font-size: 20px;
+        font-family: 'Arial';
+        letter-spacing: 5px;
+        animation: 11s marea infinite ease-in-out;
+    }
+    @keyframes marea {
+        0%   {
+            background-position-y: top;
+            letter-spacing: 5px;
+            -webkit-text-stroke: 3px rgba(73, 51, 39, 0.504);
+        }
+        25%  {
+            background-position-y: center; 
+            letter-spacing: 4px;  
+            -webkit-text-stroke: 2px rgb(58, 47, 41);
+        }
+        50%  {
+            background-position-y: bottom;
+            letter-spacing: 3px;
+            -webkit-text-stroke: 1px rgba(86, 65, 2, 0.444);
+        }
+        60%  {
+            background-position-y: center;
+            letter-spacing: 4px;
+            -webkit-text-stroke: 2px rgb(58, 47, 41)
+        }
+        100%  {
+            background-position-y: top;
+            letter-spacing: 5px;
+            -webkit-text-stroke: 3px rgba(225, 67, 0, 0.243);
+        }
+    }  
+    .contenido-principal{
+        height: 450px;
+        width: 100%;
+        padding: 30px;
+        border: 1px solid red;
+    }
+    .contenido-principal .titulo{
+        height: 15%;
+        width: 100%;
+        margin-bottom: 3%;
+    }
+    .contenido-principal .titulo h1{
+        font-size: 13px;
+    }
+    .contenido-principal .contenedor{
+        height: 80%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .contenido-principal .contenedor section{
+        height: 50%;
+        width: 100%;
+        padding: 0px;
+    }
+    .contenido-principal .contenedor section .slider{
+        height: 100%;
+        width: 55%;
+    }
+    .contenido-principal .contenedor section .slider ul {
+        width: 400%;	
+        animation: cambio 8s infinite alternate-reverse linear;
+    }
+    .contenido-principal .contenedor aside{
+        height: 50%;
+        width: 100%;
+        padding: 0px;
+    }
+    .contenido-principal .contenedor aside .articulos{
+        height: 100%;
+        width: 100%;
+        display: block;
+    }
+    .contenido-principal .contenedor aside .articulos article{
+        width: 100%;
+        height: 27%;
+        display: flex;  
+        justify-content: center;
+    }
+    .contenido-principal .contenedor aside .articulos article .numero{
+        height: 100%;
+        width: 15%;
+        font-size: 14px;
+        text-align: right;
+        margin-top: 8px;
+        margin-right: 2%;
+    }
+    .contenido-principal .contenedor aside .articulos article .texto{
+        height: 100%;
+        width: 70%;
+        display: block;
+    }
+    .contenido-principal .contenedor aside .articulos article .texto h1{
+        width: 100%;
+        height: 100%;
+        font-size: 13px;
+        color: rgb(51, 38, 38);
+    }
+    .contenido-principal .contenedor aside .articulos article .texto p{
+        display: none;
+    }
+}

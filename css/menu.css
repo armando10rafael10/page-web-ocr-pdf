@@ -1,0 +1,198 @@
+.menu{
+    background-color: #785448;
+    list-style: none;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    position: fixed;
+}
+.menu .icono{
+    width: 20%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 15px;
+}
+.menu .icono p{
+    color: white;
+}
+.menu .icono img{
+    height: 30px;
+    margin-right: 5px;
+    border-radius: 10px;
+}
+.menu .enlace{
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* background-color: red; */
+}
+.menu .enlace li{
+    height: 35px;
+    width: 120px;
+    border-right: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rebeccapurple */
+}
+.menu .enlace li a{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: royalblue; */
+}
+.menu .enlace li a:active{
+    color: white;
+}
+.menu .enlace li a:hover{
+    color: rgb(255, 156, 106);
+}
+.menu .enlace li a img{
+    margin-right: 8px;
+}
+.menu .enlace li a p{
+    font-size: 16px;
+}
+.menu .enlace .busqueda{
+    width: 230px;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    /* background-color: yellow; */
+}
+.menu .enlace .busqueda input{
+    width: 66%;
+    height: 90%;
+    border-radius: 5px;
+    padding: 0px 10px;
+    margin-right: 3%;
+    color:rgb(37, 16, 16);
+    background-color: rgba(255, 255, 208, 0.895);
+}
+.menu .enlace .busqueda button{
+    width: 35%;
+    height: 90%;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid white;
+    background-color: transparent;
+}
+.menu .enlace .busqueda button:hover{
+    color: white;
+    border: 2px solid rgba(67, 33, 33, 0.938);
+    background-color: rgb(37, 16, 16);
+}
+
+@media only screen and (max-width: 620px) and (min-width: 401px) {
+    .menu{
+        background-color: #785448;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+    }
+    .menu .icono{
+        width: 40%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0px 15px;
+    }
+    .menu .icono #iconMenu::before{
+        content:".";
+        display:block;
+        width: 32px;
+        height: 32px;
+        background:url(../images/iconos/menu.png) no-repeat;
+        margin-right: 30px;
+    }
+    .menu .icono img{
+        height: 30px;
+        margin-right: 5px;
+        border-radius: 10px;
+    }
+    #submenus{
+        display: none;
+    }
+    .menu .enlace{
+        width: 30%;
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+    }
+    .menu .enlace li{
+        height: 35px;
+        width: 100%;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: #785448;
+    }
+    .menu .enlace li a{
+        margin-left: 18px;
+    }
+    .menu .enlace .busqueda{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 400px) and (min-width: 200px) {
+    .menu{
+        background-color: #553c34;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+    }
+    .menu .icono{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0px 15px;
+    }
+    .menu .icono #iconMenu::before{
+        content:".";
+        display: block;
+        width: 32px;
+        height: 32px;
+        background:url(../images/iconos/menu.png) no-repeat;
+        margin-right: 30px;
+    }
+    .menu .icono img{
+        height: 30px;
+        margin-right: 5px;
+        border-radius: 10px;
+    }
+    #submenus{
+        display: none;
+    }
+    .menu .enlace{
+        width: 55%;
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+    }
+    .menu .enlace li{
+        height: 35px;
+        width: 100%;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: #553c34;
+    }
+    .menu .enlace li a{
+        margin-left: 18px;
+    }
+    .menu .enlace .busqueda{
+        display: none;
+    }
+}

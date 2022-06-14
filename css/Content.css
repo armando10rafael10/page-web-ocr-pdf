@@ -1,0 +1,487 @@
+*{
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+}
+html, body{
+    background-color: rgb(231, 219, 205);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image : url("../images/background-notepad.jpg"), linear-gradient(to bottom,white,rgb(95, 88, 75));
+    background-blend-mode: multiply;
+    font-family: Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
+}
+#iframe-footer{
+    width: 100%;
+    height: 600px;
+    display: block;
+    overflow: hidden;
+}
+.cuadro{
+    width: 100%;
+    height: 510px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cuadro .contenedor-cuadro{
+    width: 1000px;
+    height: 440px;
+    border-radius: 12px;
+    background-color: #ffe1b9d4;
+    border: 2px solid #d87e48;
+    display: flex;
+}
+.cuadro .contenedor-cuadro .portada{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.cuadro .contenedor-cuadro .resultado{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.contenedor-cuadro .titulo{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor-cuadro .titulo h1{
+    text-transform: uppercase;
+    color: #482309;
+    font-size: 19px;
+}
+.contenedor-cuadro .formulario,
+.contenedor-cuadro .contenido{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+}
+.contenedor-cuadro .formulario .grupo{
+    width: 100%;
+    height: 12%;
+    display: flex;
+    /* border: 1px solid #e55000; */
+}
+.grupo .contenedor-label{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.grupo .contenedor-label label{
+    width: 100%;
+    height: 70%;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+/*especificamente para el input file*/
+.grupo .label-down{
+    height: 100%;
+    align-items: flex-end;
+    font-weight: bold;
+}
+/*especificamente para el input file*/
+.grupo .label-down label{
+    align-items: flex-end;
+    font-size: 15px;
+}
+/*especificamente para el input file*/
+.grupo .contenedor-label .custom-file{
+    width: 70%;
+    height: 70%;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(215, 255, 252);
+    background-color: rgb(32, 103, 165);
+}
+/*especificamente para el input file*/
+.grupo .contenedor-label .custom-file input {
+    display: none;
+}
+.grupo .contenedor-input{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    /* background-color: rgb(17, 13, 13); */
+}
+.grupo .contenedor-input input{
+    width: 100%;
+    height: 60%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: none;
+    /* border: 1px solid #e55000; */
+}
+/*especificamente para el input file*/
+.grupo .file-input{
+    padding: 0px 10px 0px 0px;
+}
+
+.contenedor-cuadro .contenido .conversion{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #e55000; */
+}
+.contenedor-cuadro .contenido .conversion textarea{
+    width: 70%;
+    height: 100%;
+    overflow: auto;
+    padding: 8px;
+    resize: none;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-size: 11px;
+    /* border: 1px solid #e55000; */
+}
+.contenedor-cuadro .contenido .estilosTextos{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor-cuadro .contenido .estilosTextos .contenedor-estilos{
+    width: 70%;
+    height: 70%;
+    display: flex;
+    background-color: #ffbd9a;
+}
+.contenedor-cuadro .contenido .estilosTextos .contenedor-estilos .icono{
+    width: 12%;
+    height: 100%;
+    border: 1px solid rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor-cuadro .contenido .estilosTextos .contenedor-estilos .icono img{
+    width: 12px;
+    height: 12px;
+}
+.icono input[type="color" i]{
+    width: 25px;
+    height: 28px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.icono input[type="color" i]::-webkit-color-swatch{
+    border-radius: 50%;
+    border: 2px solid rgb(0, 0, 0);
+}
+.icono input[type="number" i]{
+    width: 30px;
+    height: 20px;
+    border-radius: 20%;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(255, 230, 223);
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+.contenedor-cuadro .contenido .formato{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor-cuadro .contenido .formato .contenedor-formato{
+    width: 95%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor-cuadro .contenido .formato .contenedor-formato label{
+    width: 40%;
+    height: 90%;
+    margin-right: 5px;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #2a0f00;
+}
+.contenedor-cuadro .contenido .formato .contenedor-formato select{
+    width: 25%;
+    height: 50%;
+    text-align: center;
+}
+.contenedor-cuadro .boton{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor-cuadro .boton button{
+    height: 40px;
+    width: 210px;
+    border-radius: 15px;
+    background-color: #e55000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor-cuadro .boton button p{
+    font-size: 15px;
+    color: #fff4db;
+    margin-right: 8px;
+}
+.contenedor-cuadro .boton button img{
+    height: 15px; 
+    width: 15px;   
+}
+.contenedor-cuadro .boton button:hover{
+    font-size: 17px;
+    color: #ffffff;
+    background-color: #ff8949;
+}
+progress{
+    width: 70%;
+    height: 10px;
+    border-radius: 20%;
+}
+progress[value]::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 20%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+progress[value]::-webkit-progress-value {
+    background-image:
+        -webkit-linear-gradient(-45deg, 
+                                transparent 33%, rgba(0, 0, 0, .1) 33%, 
+                                rgba(0,0, 0, .1) 66%, transparent 66%),
+        -webkit-linear-gradient(top, 
+                                rgba(255, 255, 255, .25), 
+                                rgba(0, 0, 0, .25)),
+        -webkit-linear-gradient(left, rgb(20, 204, 0), rgb(109, 255, 68));
+    border-radius: 2px; 
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+#loader{
+    background-color: #161519;
+    border: 3px solid rgba(20, 12, 45, 0.992);
+    position: absolute;
+    position: fixed;
+    top: 27%;
+    right: 40%;
+    width: 200px;
+    height: 200px;
+    border-radius: 22%;
+    text-align: center;
+    color: wheat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 620px) and (min-width: 401px) { 
+    .cuadro{
+        width: 100%;
+        height: 900px;
+    }
+    .cuadro .contenedor-cuadro{
+        width: 90%;
+        height: 800px;
+        flex-direction: column;
+    }
+    .cuadro .contenedor-cuadro .portada{
+        width: 100%;
+        height: 100%;
+        border-bottom: 2px dotted rgb(240, 90, 4);
+    }
+    .cuadro .contenedor-cuadro .resultado{
+        width: 100%;
+        height: 100%;
+        background-color: #d1bbb360;
+    }
+    .contenedor-cuadro .titulo{
+        width: 100%;
+        height: 15%;
+    }
+    .contenedor-cuadro .titulo h1{
+        font-size: 15px;
+    }
+    .contenedor-cuadro .formulario,
+    .contenedor-cuadro .contenido{
+        width: 100%;
+        height: 70%;
+    }
+    .grupo .contenedor-label{
+        width: 45%;
+        height: 100%;
+    }
+    .grupo .contenedor-label label,
+    .grupo .label-down label,
+    .grupo .contenedor-label .custom-file,
+    .grupo .contenedor-input input{
+        font-size: 12px;
+    }
+    .grupo .contenedor-input{
+        width: 50%;
+        height: 100%;
+    }
+    .contenedor-cuadro .contenido .conversion textarea{
+        width: 85%;
+        height: 100%;
+    }
+    .contenedor-cuadro .contenido .estilosTextos .contenedor-estilos{
+        width: 70%;
+        height: 70%;
+    }
+    .contenedor-cuadro .contenido .formato{
+        width: 100%;
+        height: 15%;
+    }
+    .contenedor-cuadro .contenido .formato .contenedor-formato label{
+        font-size: 13px;
+    }
+    .contenedor-cuadro .contenido .formato .contenedor-formato select{
+        width: 15%;
+    } 
+    .contenedor-cuadro .boton{
+        width: 100%;
+        height: 15%;
+    }
+    .contenedor-cuadro .boton button{
+        height: 40px;
+        width: 170px;
+    }
+    .contenedor-cuadro .boton button p{
+        font-size: 12px;
+    }
+    .contenedor-cuadro .boton button img{
+        height: 15px; 
+        width: 15px;   
+    }
+    .contenedor-cuadro .boton button:hover{
+        font-size: 13px;
+    }
+    #loader{
+        right: 30%;
+    }
+}
+
+@media only screen and (max-width: 400px) and (min-width: 200px) {
+    .cuadro{
+        width: 100%;
+        height: 940px;
+    }
+    .cuadro .contenedor-cuadro{
+        width: 90%;
+        height: 880px;
+        background-color: #ffe1b9b4;
+        flex-direction: column; 
+    }
+    .cuadro .contenedor-cuadro .portada{
+        width: 100%;
+        height: 100%;
+        border-bottom: 2px dotted rgb(240, 90, 4);
+    }
+    .cuadro .contenedor-cuadro .resultado{
+        width: 100%;
+        height: 100%;
+        background-color: #f07f4235;
+    }
+    .contenedor-cuadro .titulo{
+        width: 100%;
+        height: 15%;
+    }
+    .contenedor-cuadro .titulo h1{
+        font-size: 14px;
+    }
+    .contenedor-cuadro .formulario,
+    .contenedor-cuadro .contenido{
+        width: 100%;
+        height: 70%;
+    }
+    .grupo .contenedor-label{
+        width: 45%;
+        height: 100%;
+    }
+    .grupo .contenedor-label label,
+    .grupo .label-down label,
+    .grupo .contenedor-label .custom-file,
+    .grupo .contenedor-input input{
+        font-size: 11px;
+    }
+    .grupo .contenedor-input{
+        width: 50%;
+        height: 100%;
+    }
+    .contenedor-cuadro .contenido .conversion textarea{
+        width: 90%;
+        height: 100%;
+    }
+    .contenedor-cuadro .contenido .estilosTextos .contenedor-estilos{
+        width: 90%;
+        height: 70%;
+    }
+    .contenedor-cuadro .contenido .formato{
+        width: 100%;
+        height: 15%;
+    }
+    .contenedor-cuadro .contenido .formato .contenedor-formato label{
+        font-size: 11px;
+    }
+    .contenedor-cuadro .contenido .formato .contenedor-formato select{
+        width: 15%;
+    } 
+    .contenedor-cuadro .boton{
+        width: 100%;
+        height: 15%;
+    }
+    .contenedor-cuadro .boton button{
+        height: 40px;
+        width: 170px;
+    }
+    .contenedor-cuadro .boton button p{
+        font-size: 11px;
+    }
+    .contenedor-cuadro .boton button img{
+        height: 15px; 
+        width: 15px;   
+    }
+    .contenedor-cuadro .boton button:hover{
+        font-size: 13px;
+    }
+    #loader{
+        right: 20%;
+    }
+}
