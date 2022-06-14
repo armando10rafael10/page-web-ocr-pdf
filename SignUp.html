@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>pagina principal</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/menu.css" rel="stylesheet">
+        <link href="css/signUp.css" rel="stylesheet">
+        <link href="css/footer.css" rel="stylesheet">
+        <link href="fontawesome-6.1.1/css/all.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/node-uuid/1.4.7/uuid.min.js"></script>
+        <script src="js/SHA256.js"></script>
+    </head>
+    <body> 
+        <ul class="menu">
+            <div class="icono">
+                <div id="iconMenu"></div>
+                <img src="images/icon.png" alt="icono">
+                <p>Autoworziable</p>
+            </div>
+            <div class="enlace" id="submenus">
+                <li>
+                    <a href="Home.html">
+                        <img src="images/iconos/icon-home.png" alt="home" height="16px">
+                        <p>home</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#iframe-footer">
+                        <img src="images/iconos/icon-aboutUs.png" alt="aboutUs" height="16px">
+                        <p>About Us</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="Help.html">
+                        <img src="images/iconos/icon-help.png" alt="help" height="16px">
+                        <p>Help</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="SignUp.html">
+                        <img src="images/iconos/icon-signUp.png" alt="signUp" height="16px">
+                        <p>Sign Up</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="SignIn.html">
+                        <img src="images/iconos/icon-signIn.png" alt="signIn" height="16px">
+                        <p>Sign In</p>
+                    </a>
+                </li>
+                <li class="busqueda">
+                    <input type="text" placeholder="search" id="search">
+                    <button>Search</button>
+                </li>
+            </div>
+        </ul>
+        <br>
+        <br>
+
+        <div class="registro">
+            <div class="contenedor-registro">
+                <div class="titulo">
+                    <span>
+                        <i class="fa-solid fa-user-plus"></i>
+                    </span>
+                    <h1>Sign Up</h1>
+                </div>
+                <div class="contenido">
+                    <div class="icono">
+                        <div class="contenedor-icono">
+                            <img src="images/icon.png" alt="icono">
+                        </div>
+                    </div>
+                    <div class="datos">
+                        <div class="group">
+                            <label for="emailUser">Email: </label>
+                            <input type="text" placeholder="email@.com" id="emailUser">
+                        </div>
+                        <div class="group">
+                            <label for="passUser">Password: </label>
+                            <input type="password" placeholder="password" id="passUser">
+                            <span id="key-password"><i class="fa-solid fa-key"></i></span>
+                        </div>
+                        <div class="group">
+                            <label for="confirmPassUser">Confirm Password: </label>
+                            <input type="password" placeholder="password" id="confirmPassUser">
+                            <span id="key-confirmPassword"><i class="fa-solid fa-key"></i></span>
+                        </div>   
+                    </div>
+                </div>
+                <div class="boton">
+                    <button onclick="signUp()">Sign Up</button>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <iframe id="iframe-footer" src="footer.html" frameborder="0"></iframe>
+        </div>
+
+        <script src="js/SignUp.js"></script>
+        <script src="js/menu.js"></script>
+
+    </body>
+</html>

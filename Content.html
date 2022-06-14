@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>pagina principal</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="js/jspdf.min.js"></script>
+        <!-- <script src='https://unpkg.com/tesseract.js@v2.0.2/dist/tesseract.min.js'></script> -->
+        <script src='js/teseract-min.js'></script>
+        <link href="css/menu.css" rel="stylesheet">
+        <link href="css/Content.css" rel="stylesheet">
+    </head>
+    <body>      
+        <ul class="menu">
+            <div class="icono">
+                <div id="iconMenu"></div>
+                <img src="images/icon.png" alt="icono">
+                <p>Autoworziable</p>
+            </div>
+            <div class="enlace" id="submenus">
+                <li>
+                    <a href="Home.html">
+                        <img src="images/iconos/icon-home.png" alt="home" height="16px">
+                        <p>home</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#iframe-footer">
+                        <img src="images/iconos/icon-aboutUs.png" alt="aboutUs" height="16px">
+                        <p>About Us</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="Help.html">
+                        <img src="images/iconos/icon-help.png" alt="help" height="16px">
+                        <p>Help</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="SignIn.html">
+                        <img src="images/iconos/cerrar-sesion.png" alt="signOut" height="16px">
+                        <p>Sign Out</p>
+                    </a>
+                </li>
+                <li class="busqueda">
+                    <input type="text" placeholder="search" id="search">
+                    <button>Search</button>
+                </li>
+            </div>
+        </ul>
+        <br><br>
+
+        <div class="cuadro">
+            <div class="contenedor-cuadro">
+                <div class="portada">
+                    <div class="titulo">
+                        <h1>Ingresar datos de la portada</h1>
+                    </div>
+                    <div class="formulario">
+                        <div class="grupo">
+                            <div class="contenedor-label">
+                                <label for="nombreAlumno">Nombre del alumno:</label>
+                            </div>
+                            <div class="contenedor-input">
+                                <input type="text" placeholder="Nombre del alumno" id="nombreAlumno">
+                            </div>
+                        </div>
+                        <div class="grupo">
+                            <div class="contenedor-label">
+                                <label for="matriculaAlumno">Matricula del alumno:</label>
+                                
+                            </div>
+                            <div class="contenedor-input">
+                                <input type="text" placeholder="Matricula del alumno" id="matriculaAlumno">
+                            </div>
+                        </div>
+                        <div class="grupo">
+                            <div class="contenedor-label">
+                                <label for="nombreMateria">Nombre de la materia:</label> 
+                            </div>
+                            <div class="contenedor-input">
+                                <input type="text" placeholder="Nombre de la asignatura" id="nombreMateria">
+                            </div>
+                        </div>
+                        <div class="grupo">
+                            <div class="contenedor-label">
+                                <label for="nombreProfesor">Nombre del profesor(a):</label>
+                                
+                            </div>
+                            <div class="contenedor-input">
+                                <input type="text" placeholder="Nombre del profesor(a)" id="nombreProfesor">
+                            </div>
+                        </div>
+                        <div class="grupo">
+                            <div class="contenedor-label">
+                                <label for="nombreTema">Nombre del tema:</label>
+                            </div>
+                            <div class="contenedor-input">
+                                <input type="text" placeholder="Nombre del tema" id="nombreTema">
+                            </div>
+                        </div>
+                        <div class="grupo">
+                            <div class="contenedor-label">
+                                <label for="fechaEntrega">Fecha de entrega:</label>
+                            </div>
+                            <div class="contenedor-input">
+                                <input type="text" placeholder="Fecha de entrega" id="fechaEntrega">
+                            </div>    
+                        </div>
+                        <div class="grupo">
+                            <div class="contenedor-label label-down">
+                                <label for="seleccionarImg">Seleccionar una imagen:</label>
+                            </div>
+                            <div class="contenedor-input"></div>    
+                        </div>
+                        <div class="grupo">
+                            <div class="contenedor-label">
+                                <label class="custom-file">
+                                    <input type="file" id="seleccionarImg" accept="image/png, image/jpeg, image/jpg"/>
+                                    seleccionar una imagen
+                                </label>
+                            </div>
+                            <div class="contenedor-input file-input">
+                                <input type="text" id="textoFile" placeholder="seleccione una imagen" disabled>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="boton">
+                        <button onclick="ComenzarConversion()">
+                            <p>comenzar conversión</p>
+                            <img src="images/iconos/icon-start.png" alt="start conversión">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="resultado">
+                    <div class="titulo">
+                        <h1>Resultado de la conversión</h1>
+                    </div>
+                    <div class="contenido">
+                        <div class="conversion" id="contenidoConvertido">
+                            <textarea id="textoConvertido" placeholder="texto convertido aqui"></textarea>
+                        </div>
+                        <div class="estilosTextos">
+                            <div class="contenedor-estilos">
+                                <div class="icono" onclick="ApplyFontBold()">
+                                    <img src="images/iconos/icon-negrita.png" alt="icono">
+                                </div>
+                                <div class="icono" onclick="ApplyFontItalic()">
+                                    <img src="images/iconos/icon-italico.png" alt="icono">
+                                </div>
+                                <div class="icono" onclick="ApplyFontSize()" alt="icono">
+                                    <input type="number" id="_fontSize" value="11" step="2" min="5" max="15" >
+                                </div>
+                                <div class="icono" onchange="ApplyFontColor()" alt="icono">
+                                    <input type="color" id="_selectColor" value="#000000">
+                                </div>
+                                <div class="icono" onclick="ApplyFontAlignIzq()">
+                                    <img src="images/iconos/icon-alineacion-izquierda.png" alt="icono">
+                                </div>
+                                <div class="icono" onclick="ApplyFontAlignCenter()">
+                                    <img src="images/iconos/icon-justificar-alinear.png" alt="icono">
+                                </div>
+                                <div class="icono" onclick="ApplyFontAlignDer()">
+                                    <img src="images/iconos/icon-alineacion-de-texto-a-la-derecha.png" alt="icono">
+                                </div>
+                                <div class="icono" onchange="ApplyFontBackground()" alt="icono">
+                                    <input type="color" id="_selectBackgroundColor" value="#FFFFFF">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="formato">
+                            <div class="contenedor-formato">
+                                <label for="formato">Seleccionar formato:</label>
+                                <select id="formato">
+                                    <option value="Pdf">Pdf</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="boton">
+                        <button onclick="DescargarArchivo()">
+                            <p>Descargar Archivo</p>
+                            <img src="images/iconos/icono-download.png" alt="download">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="loader">
+            <img src="images/loader.gif" height="90px" width="90px">
+            <span id="StatusProgress">cargando...</span>
+            <progress id="ProgressConversion" max="100" value="0"></progress>
+            <span id="ProgressPorcentaje">0%</span>
+        </div>
+
+        <div>
+            <iframe id="iframe-footer" src="footer.html" frameborder="0"></iframe>
+        </div>
+
+        <script src="js/content.js"></script>
+        <script src="js/menu.js"></script>
+
+    </body>
+</html>

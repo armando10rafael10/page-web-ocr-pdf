@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>pagina principal</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/menu.css" rel="stylesheet">
+        <link href="css/Home.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Smooch+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    </head>
+    <body>   
+        
+        <ul class="menu">
+            <div class="icono">
+                <div id="iconMenu"></div>
+                <img src="images/icon.png" alt="icono">
+                <p>Autoworziable</p>
+            </div>
+            <div class="enlace" id="submenus">
+                <li>
+                    <a href="Home.html">
+                        <img src="images/iconos/icon-home.png" alt="home" height="16px">
+                        <p>home</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#iframe-footer">
+                        <img src="images/iconos/icon-aboutUs.png" alt="aboutUs" height="16px">
+                        <p>About Us</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="Help.html">
+                        <img src="images/iconos/icon-help.png" alt="help" height="16px">
+                        <p>Help</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="SignUp.html">
+                        <img src="images/iconos/icon-signUp.png" alt="signUp" height="16px">
+                        <p>Sign Up</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="SignIn.html">
+                        <img src="images/iconos/icon-signIn.png" alt="signIn" height="16px">
+                        <p>Sign In</p>
+                    </a>
+                </li>
+                <li class="busqueda">
+                    <input type="text" placeholder="search" id="search">
+                    <button>Search</button>
+                </li>
+            </div>
+        </ul>
+        <br>
+        <br>
+
+        <div class="presentacion">
+                <h1>bienvenido</h1>
+        </div>
+        
+        <div class="contenido-principal">
+            <div class="titulo">
+                <h1>Pasos a seguir</h1>
+            </div>
+            <div class="contenedor">
+                <section>
+                    <div class="slider">
+                        <ul>
+                            <li>
+                                <img src="images/slider-seleccionar-archivo.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="images/slider-modificar-archivo.jpg" alt="">
+                            </li>
+                            <li>
+                                <img src="images/slider-descargar-archivos.png" alt="">
+                            </li>
+                        </ul>		  
+                    </div>
+                </section>
+                <aside>
+                    <div class="articulos">
+                        <article>
+                            <div class="numero">1</div>
+                            <div class="texto">
+                                <h1>Selecciona una imagen(foto)</h1>
+                                <p>
+                                    Selecciona una imagen de tu ordenador donde contenga la tarea 
+                                    escrita, que sea lo mas limpia posible la foto y posteriormente 
+                                    rellene los datos de la portada.
+                                </p>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="numero">2</div>
+                            <div class="texto">
+                                <h1>Modificación del estilo y diseño</h1>
+                                <p>
+                                    Decide que estilos quieres añadir, como el color, el tipo de fuente.
+                                </p>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="numero">3</div>
+                            <div class="texto">
+                                <h1>Descarga del formato</h1>
+                                <p>
+                                    Selecciona el formato cual quieres que se descargue el documento y 
+                                    obtenga su documento para entregarlo a su profesor(a).
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </aside>
+            </div>
+        </div>
+
+        <div>
+            <iframe id="iframe-footer" src="footer.html" frameborder="0"></iframe>
+        </div>
+
+        <script src="js/menu.js"></script>
+
+    </body>
+</html>

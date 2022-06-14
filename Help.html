@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>pagina principal</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/menu.css" rel="stylesheet">
+        <link href="css/Help.css" rel="stylesheet">
+    </head>
+    <body>
+        <ul class="menu">
+            <div class="icono">
+                <div id="iconMenu"></div>
+                <img src="images/icon.png" alt="icono">
+                <p>Autoworziable</p>
+            </div>
+            <div class="enlace" id="submenus">
+                <li>
+                    <a href="Home.html">
+                        <img src="images/iconos/icon-home.png" alt="home" height="16px">
+                        <p>home</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#iframe-footer">
+                        <img src="images/iconos/icon-aboutUs.png" alt="aboutUs" height="16px">
+                        <p>About Us</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="Help.html">
+                        <img src="images/iconos/icon-help.png" alt="help" height="16px">
+                        <p>Help</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="SignUp.html">
+                        <img src="images/iconos/icon-signUp.png" alt="signUp" height="16px">
+                        <p>Sign Up</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="SignIn.html">
+                        <img src="images/iconos/icon-signIn.png" alt="signIn" height="16px">
+                        <p>Sign In</p>
+                    </a>
+                </li>
+                <li class="busqueda">
+                    <input type="text" placeholder="search" id="search">
+                    <button>Search</button>
+                </li>
+            </div>
+        </ul>
+        <br>
+        <br>
+
+        <div class="cuadro">
+            <div class="contenedor">
+                <div class="titulo">
+                    <h1>preguntas frecuentes</h1>
+                </div>
+                <ul class="contenido">
+                    <li>
+                        <h2>¿Qué archivos puedo subir?</h2>
+                        <p>
+                            Usted puede subir cualquier archivo de texto que contiene la imagen. Formato de archivo
+                            gráfico puede ser cualquiera de los enumerados a continuación: TIF/TIFF (TIFF, JPEG/JPG,
+                            BMP, PCX, PNG, GIF, PDF (PDF de varias páginas) La única restricción: el tamaño del
+                            archivo no debe exceder los 15 Mb libres en el modo de invitado y 200 mb para usuarios
+                            registrados. La resolución de la imagen debe ser de 200 DPI o superior para garantizar
+                            buenos resultados de reconocimiento.
+                        </p>
+                    </li>
+                    <li>
+                        <h2>¿Qué pasa con los archivos subidos?</h2>
+                        <p>
+                            Todos los documentos reconocidos en la cuenta "Invitado" se eliminan automáticamente después
+                            de terminar el proceso. Para los usuarios registrados de origen de los documentos y de los
+                            archivos convertidos se guardan en el usuario de la lista de documentos de un mes
+                        </p>
+                    </li>
+                    <li>
+                        <h2>¿Cómo puedo ver o recibir el resultado?</h2>
+                        <p>
+                            Después de que el texto es reconocida correctamente, enlaces a la recién creada archivos de
+                            salida aparecen en los documentos del usuario. Usted puede abrir el fichero para ver o descargar a tu PC.
+                        </p>
+                    </li>
+                    <li>
+                        <h2>He perdido la imagen de origen. Puedo descargar de nuevo?</h2>
+                        <p>Sí, si usted es un usuario registrado, usted puede descargar el código fuente de la imagen en su área de trabajo.</p>
+                    </li>
+                    <li>
+                        <h2>¿Cuánto tiempo tomará para que reconozca mi imagen?</h2>
+                        <p>
+                            El texto de reconocimiento de tiempo depende de muchos factores. Primero de todo, es la calidad de la imagen.
+                            El promedio de tiempo de reconocimiento de un archivo es de varios segundos. El segundo factor importante es el
+                            servicio actual de la carga de trabajo. Si las solicitudes de reconocimiento provienen de diferentes usuarios
+                            al mismo tiempo, hay una lista de espera.
+                        </p>
+                    </li>
+                    <li>
+                        <h2>No he recibido un correo electrónico de confirmación. Por qué?</h2>
+                            <p>Esto puede ser causado por un par de razones.</p>
+                            <p>
+                                1) a Veces hay un problema con el filtro de spam. Por favor revise su carpeta de spam,
+                                    ya que parece resolver la mayoría de los casos. Esto se aplica especialmente cuando
+                                    usted tiene una cuenta de hotmail, yahoo o gmail cuenta de correo electrónico.
+                            </p>
+                            <p>
+                                2) Compruebe si ha escrito la dirección de e-mail correctamente.
+                            </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <iframe id="iframe-footer" src="footer.html" frameborder="0"></iframe>
+        </div>
+
+        <script src="js/menu.js"></script>
+        
+    </body>
+</html>
